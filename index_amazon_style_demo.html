@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon Pay Style — Visual Demo</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif}
+body{background:#d2d6d8;color:#171717}
+.app{width:min(100%,544px);min-height:100vh;margin:0 auto;background:#f7f4f4;position:relative;padding-bottom:76px}
+.topbar{height:82px;background:#f18a00;padding:10px 22px 12px;border-bottom:4px solid #8d20a0}
+.toprow{height:53px;display:flex;align-items:center;gap:17px}
+.back{font-size:31px;line-height:1;color:white;width:25px}
+.search{height:42px;flex:1;background:#fff;border-radius:11px;display:flex;align-items:center;padding:0 14px;color:#6c6c6c;gap:10px;font-size:16px;white-space:nowrap;overflow:hidden}
+.glass{font-size:23px;color:#555}.tools{margin-left:auto;display:flex;gap:15px;font-size:19px;color:#666}
+.summary{display:flex;justify-content:space-between;align-items:center;padding:19px 23px 17px;border-bottom:1px solid #e7e1e1}
+.brand{font-size:23px;font-weight:700;letter-spacing:-.8px}.sub{font-size:16px;margin-top:5px;color:#333}.amount{font-size:35px;font-weight:700}
+.card-wrap{padding:24px 22px 0}
+.gift-card{height:308px;width:100%;border-radius:29px;background:#f36a00;position:relative;overflow:hidden;box-shadow:0 4px 9px #0002,inset 0 0 0 5px #fff;display:flex;align-items:center;justify-content:center}
+.bow{position:absolute;width:190px;height:190px;border:15px solid #d95b00;border-radius:50%;opacity:.52;transform:rotate(35deg)}
+.bow:before,.bow:after{content:"";position:absolute;width:95px;height:53px;border:12px solid #d95b00;border-radius:80% 15% 80% 15%;top:20px}
+.bow:before{left:-64px;transform:rotate(30deg)}.bow:after{right:-64px;transform:rotate(150deg)}
+.bow.left{left:-94px;bottom:-88px}.bow.right{right:-62px;top:-48px;transform:rotate(5deg) scale(1.15)}
+.smile{width:250px;height:80px;position:relative;z-index:1;margin-top:-4px}.smile svg{width:100%;height:100%;display:block}
+.card-caption{position:absolute;right:25px;bottom:20px;color:#fff;text-align:right;font-size:14px;line-height:17px;font-weight:600}
+.demo-tag{position:absolute;top:12px;left:12px;background:#fff;color:#8c3300;padding:5px 8px;border-radius:5px;font-size:10px;font-weight:700;letter-spacing:.5px}
+.redeem{display:block;margin:28px 22px 0;width:calc(100% - 44px);height:63px;border:0;border-radius:34px;background:#f5c900;color:#111;font-size:19px;font-weight:700;box-shadow:0 4px 8px #d6b00055;cursor:pointer}
+.note{text-align:center;color:#888;font-size:12px;line-height:1.4;margin:20px 22px}
+.bottom-nav{height:72px;position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,544px);background:#fafafa;border-top:1px solid #ddd;display:flex;justify-content:space-around;align-items:center}
+.navitem{width:16.66%;display:flex;flex-direction:column;align-items:center;gap:4px;color:#666;font-size:14px}
+.navicon{font-size:25px;line-height:25px;position:relative}.active{color:#25899a;font-weight:700}
+.badge{position:absolute;right:-8px;top:-4px;background:#f18a00;color:#fff;border-radius:50%;font-size:10px;padding:2px 5px}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="topbar"><div class="toprow"><div class="back">‹</div><div class="search"><span class="glass">⌕</span><span>Search or ask a question...</span><span class="tools"><span>▣</span><span>🎙</span><span>▧</span></span></div></div></header>
+<section class="summary"><div><div class="brand">amazon pay</div><div class="sub">gift card</div></div><div class="amount">₹500</div></section>
+<section class="card-wrap"><div class="gift-card">
+<span class="demo-tag">UNOFFICIAL DEMO</span><div class="bow left"></div><div class="bow right"></div>
+<div class="smile"><svg viewBox="0 0 300 90" role="img" aria-label="decorative smile"><path d="M18 17 C91 95 211 96 275 18 C265 48 249 67 224 76 C151 111 66 80 18 17Z" fill="#fff"/><path d="M252 20 L281 13 L270 43" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="card-caption">amazon pay<br>gift card</div></div></section>
+<button class="redeem" type="button" onclick="alert('Unofficial visual demo only. No gift card can be redeemed.')">Redeem Gift Card (Demo)</button>
+<p class="note">Unofficial visual mockup for UI practice only. Not an Amazon service; no real gift card, account, or payment is involved.</p>
+<nav class="bottom-nav">
+<div class="navitem"><div class="navicon">⌂</div><div>Home</div></div>
+<div class="navitem"><div class="navicon">♙</div><div>You</div></div>
+<div class="navitem active"><div class="navicon">▣</div><div>Wallet</div></div>
+<div class="navitem"><div class="navicon">🛒<span class="badge">3</span></div><div>Cart</div></div>
+<div class="navitem"><div class="navicon">☰</div><div>Browse</div></div>
+<div class="navitem"><div class="navicon">☻</div><div>Rufus</div></div>
+</nav></main></body></html>
